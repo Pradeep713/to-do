@@ -79,6 +79,7 @@ class AuthCreateNewUserView(APIView):
                 }
                 return Response(bad_response, status=status.HTTP_400_BAD_REQUEST)
         except Exception as e:
+            print(e)
             bad_response = {
                 "status": "failed",
                 "message": "User with this email already exists."
