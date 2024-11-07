@@ -81,7 +81,7 @@ class AuthCreateNewUserView(APIView):
         except Exception as e:
             bad_response = {
                 "status": "failed",
-                "message": str(e.message)
+                "message": str(e)
             }
             return Response(bad_response, status=status.HTTP_400_BAD_REQUEST)
       
